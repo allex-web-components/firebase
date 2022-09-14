@@ -1,0 +1,35 @@
+{
+  "js": {
+  },
+  "browserify": {
+    "dist/browserified.js":"index.js"
+  },
+  "exclude": {
+    "jshint": [
+      "browserified.js"
+    ]
+  },
+  "dependencies": {
+    "js": [
+    ],
+    "css": [
+    ]
+  },
+  "additionaltargets": {
+    "js": [
+      ["dist", "firebase.8.10.0.js"],
+      ["dist", "firebase-messaging.8.10.0.js"]
+    ]
+  },
+  "template": [
+    {
+      "relative": false,
+      "output": "firebase-messaging-sw.js",
+      "input": ["swig", "firebase-messaging-sw.swig"]
+    }
+  ],
+  "protoboard": {
+    "role":"web_component",
+    "js_doc_filters": "^(src)"
+  }
+}
